@@ -1,0 +1,220 @@
+:root{
+
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    text-transform: capitalize;
+}
+*:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color:blue;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(68, 68, 122);
+}
+.page{
+    background-color: #0a0f2a;
+    min-height: 100vh;
+    display: flex;
+}
+.sidebar{
+    background-color: #324d7e75;
+    width: 80px;
+    position: relative;
+    padding: 20px;
+    box-shadow: inset 0 0 10px #92808052;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.sidebar:hover{
+    width: 200px;
+}
+
+@media (max-width:767px) {
+    .page .sidebar{
+        width: 60px;
+        padding: 10px;
+    }
+    .page .sidebar img{
+        display: none;
+    }
+    .page .sidebar .info h2{
+        font-size: 14px;
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .page .sidebar ul a span{
+        display: none;
+    }
+}
+.sidebar .info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar .info img{
+    width: 50px;
+    padding: 2px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.sidebar .info h2{
+    color: white;
+    margin: 0;
+    margin-left: 20px;
+    transition: 0.5s;
+    text-align: center;
+}
+.sidebar ul{
+    position: relative;
+    height: 90%;
+}
+.sidebar ul li a{
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active{
+    background-color: #ffeaea5e;
+}
+.sidebar ul li a span{
+    margin-left: 30px;
+}
+
+.sidebar ul .log-out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.sidebar ul .log-out a:hover{
+    background-color: #930f0f;
+}
+/* Start Content */
+.content{
+    width: 100%;
+    overflow: hidden;
+}
+.content .head,
+.content .bot{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 15px;
+    background-color: blue;
+    border-radius: 6px;
+    height: 40px;
+}
+.content .info{
+    color: white;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 0 15px;
+    text-align: center;
+}
+@media (max-width:767px) {
+    .content .info{
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+.content .box{
+    background-color: #324d7e75;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .box i{
+    font-size: 30px;
+}
+@media (max-width:767px) {
+    .content .box i{
+        margin-right: 20px;
+    }
+}
+.content .box .text p{
+    margin: 0;
+    font-size: 14px;
+}
+.content .box .text span{
+    font-size: 30px;
+}
+/* Start Projects */
+.products{
+    padding: 0 20px;
+    overflow-x: auto;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-spacing: 5px;
+}
+table thead{
+    background-color: blue;
+    color: white;
+    overflow: hidden;
+}
+table thead th{
+    padding: 10px;
+    border-radius: 10px;
+}
+table tbody{
+    background-color: #324d7e75;
+    overflow: hidden;
+}
+table tbody td{
+    padding: 10px;
+    border-radius: 10px;
+}
+table tbody td:first-of-type,
+table tbody td:nth-of-type(2){
+    color: white;
+}
+table tbody td:nth-of-type(2) span{
+    background-color: green;
+    padding: 6px;
+    border-radius: 6px;
+}
+table tbody td:last-of-type span{
+    background-color: #d1cb0a;
+    padding: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* End Projects */
+/* End Content */
